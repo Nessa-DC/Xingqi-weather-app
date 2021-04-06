@@ -10,13 +10,70 @@
     rel="stylesheet"
     integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
     crossorigin="anonymous" />
+       <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/29d44c7303.js"
+      crossorigin="anonymous"
+    ></script>
     <title>XingqiWeather</title>
   </head>
   <body>
     <div class="container">
-      <h1>No stress</h1>
-      <button type="button" class="btn btn-primary">Primary</button>
-      <h2>test</h2>
+    <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-8">
+              <form id="search-form">
+                <input
+                  type="search"
+                  placeholder="Enter city"
+                  name="search"
+                  id="search-field"
+                  class="search-field"
+                />
+                <input
+                  type="submit"
+                  value="Search"
+                  id="search-button"
+                  class="search-button"
+                />
+              </form>
+            </div>
+            <div class="col-4">
+              <button id="current-button" class="current-button">
+                Current location
+              </button>
+            </div>
+          </div>
+          <h1>
+            <i class="fas fa-map-marker-alt"></i>
+            <span id="city">Charleroi</span>
+          </h1>
+          <h2>Sunday 16:36</h2>
+          <p>
+            <span id="description" class="description"> Few Clouds </span>
+          </p>
+          <div class="row">
+            <div class="col-8">
+              <h3>
+                <span id="current-temp" class="current-temp">5</span
+                ><span class="current-units">°C</span>
+              </h3>
+            </div>
+            <div class="col-4">
+              <ul class="more-details">
+                <li>Humidity <span id="humidity">80</span>%</li>
+                <li>Wind <span id="wind">4.3</span>km/h</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="coded">
+      <a href=""> Open-source </a> code
+      by Nessa DC
+    </p>
     </div>
     <script src="src/script.js"></script>
   </body>
