@@ -1,13 +1,11 @@
 body {
-  color: #1a9fe2;
-  padding-top: 71px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
-  background: #093d79;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background: #052850;
   background-image: url("https://source.unsplash.com/1600x900/?landscape");
 }
 
@@ -33,7 +31,7 @@ a {
 
 ul {
   list-style: none;
-  color: #1479ac;
+  color: #fff;
 }
 
 li {
@@ -45,50 +43,54 @@ li {
 }
 
 .card {
-  border: none;
-  border-radius: 10px;
-  box-shadow: 2px 2px 10px #1479ac;
-  padding: 16px 10px;
+  background: #000000d0;
+  color: white;
+  border-radius: 30px;
+  padding: 2em;
   width: 100%;
   max-width: 420px;
   margin: 1em;
-  background: #eaeaea;
 }
 
 .search-field {
-  border: 1px solid #1479ac;
-  border-radius: 4px;
+  border: none;
+  border-radius: 20px;
   margin-right: 6px;
-  padding: 5px;
-  width: 269px;
+  padding: 1em;
+  width: calc(100%-100px);
+  color: #fff;
+  background: #7c7c7c2b;
 }
 
 .search-button {
-  background: #093d79;
-  border: 2px solid #1479ac;
-  border-radius: 4px;
+  background: #7c7c7c2b;
+  border: none;
+  border-radius: 20px;
   color: #fff;
-  padding: 4px 10px;
+  padding: 1em;
   transition: ease-in-out 200ms;
+  cursor: pointer;
 }
 
 .search-button:hover {
-  background: #fff;
-  color: #1479ac;
+  background: #7c7c7c8b;
+  color: grey;
 }
 
 .current-button {
-  background: #03a9f4;
-  border: 2px solid #03a9f4;
-  border-radius: 4px;
+  background: #7c7c7c2b;
+  border: none;
+  border-radius: 18px;
   color: #fff;
-  padding: 4px 10px;
+  padding: 0, 5em;
   transition: ease-in-out 200ms;
+  cursor: pointer;
+  margin-top: 10px;
 }
 
 .current-button:hover {
-  background: #03a8f42c;
-  color: #03a9f4;
+  background: #7c7c7c8b;
+  color: gray;
 }
 
 .description {
