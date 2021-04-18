@@ -39,11 +39,13 @@ let month = months[now.getMonth()];
 h2.innerHTML = `${day}, ${month} ${date} it's ${hours}:${minutes}`;
 
 function showSearchedWeather(response) {
+  console.log(response.data)
   let cityResult = document.querySelector("#city");
   let descriptionResult = document.querySelector("#description");
   let tempResult = document.querySelector("#current-temp");
   let humidityResult = document.querySelector("#humidity");
   let windResult = document.querySelector("#wind");
+  let iconElement = document.querySelector("#conditions-icon");
 
   let temperatureRounded = Math.round(response.data.main.temp);
 
@@ -52,6 +54,7 @@ function showSearchedWeather(response) {
   tempResult.innerHTML = `${temperatureRounded}`;
   humidityResult.innerHTML = response.data.main.humidity;
   windResult.innerHTML = response.data.wind.speed;
+  iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
 function defineCity(event) {

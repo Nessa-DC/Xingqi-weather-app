@@ -95,6 +95,7 @@ li {
 
 .description {
   font-weight: 600;
+  text-transform: capitalize;
 }
 
 .current-units {
@@ -107,4 +108,12 @@ li {
 .coded {
   font-family: monospace;
   text-align: center;
+}
+#conditions-icon {
+  padding: 0px;
+  height: 125px;
+  width: 125px;
+}
+.current-temp {
+  margin: auto;
 }
