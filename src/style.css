@@ -105,6 +105,21 @@ li {
   top: -16px;
 }
 
+#celsius,
+#fahrenheit {
+  position: relative;
+  font-size: 20px;
+  top: -24px;
+  text-decoration: none;
+}
+.active {
+  color: #fff;
+  cursor: default;
+}
+.active:hover {
+  text-decoration: none;
+}
+
 #conditions-icon {
   padding: 0px;
   height: 125px;
