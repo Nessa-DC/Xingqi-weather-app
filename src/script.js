@@ -41,6 +41,35 @@ let month = months[now.getMonth()];
 
 h2.innerHTML = `${day}, ${month} ${date} it's ${hours}:${minutes}`;
 
+function displayForecast () {
+  let forecastElement = document.querySelector("#forecast");
+
+let forecastHTML = `<div class="row">`;
+let days = ["Sun", "Mon", "Tue", "Wed", "Thu"];
+days.forEach(function (day) {
+
+  forecastHTML = forecastHTML + `
+
+                <div class="col-2">
+                  <div class="weather-forecast-date">${day}</div>
+                  <img
+                    src="http://openweathermap.org/img/wn/04d@2x.png"
+                    alt=""
+                    width="42"
+                  />
+                  <div class="weather-forecast-temperatures">
+                    <span class="weather-forecast-temperature-max"> 20° </span>
+                    <span class="weather-forecast-temperature-min"> 15°</span>
+                  </div>
+                </div>
+              
+`;
+});
+
+forecastHTML = forecastHTML+ `</div>`;
+forecastElement.innerHTML = forecastHTML;
+}
+
 function showSearchedWeather(response) {
   console.log(response.data)
   let cityResult = document.querySelector("#city");
@@ -139,3 +168,5 @@ function convertToCelsius(event) {
 let celsiusTemperature = 0;
 let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", convertToCelsius);
+
+displayForecast()
