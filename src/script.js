@@ -57,7 +57,7 @@ function displayForecast (response) {
 
 let forecastHTML = `<div class="row">`;
 forecast.forEach(function (forecastDay, index) {
-  if (index < 5) {
+  if (index < 6) {
 
   forecastHTML = forecastHTML + `
 
@@ -107,8 +107,6 @@ function showSearchedWeather(response) {
   windResult.innerHTML = response.data.wind.speed;
   iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 
-  getForecast(response.data.coord);
-  
 }
 
 function defineCity(event) {
@@ -139,6 +137,8 @@ function showCurrentLocationWeather(response) {
   tempResult.innerHTML = `${temperatureRounded}`;
   humidityResult.innerHTML = response.data.main.humidity;
   windResult.innerHTML = response.data.wind.speed;
+
+   getForecast(response.data.coord);
 
 }
 
