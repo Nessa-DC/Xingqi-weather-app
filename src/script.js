@@ -106,6 +106,9 @@ function showSearchedWeather(response) {
   humidityResult.innerHTML = response.data.main.humidity;
   windResult.innerHTML = response.data.wind.speed;
   iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+
+  getForecast(response.data.coord);
+  
 }
 
 function defineCity(event) {
@@ -137,7 +140,6 @@ function showCurrentLocationWeather(response) {
   humidityResult.innerHTML = response.data.main.humidity;
   windResult.innerHTML = response.data.wind.speed;
 
-  getForecast(response.data.coord);
 }
 
 function retrievePosition(position) {
